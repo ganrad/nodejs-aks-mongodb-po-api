@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: mtcslabtest.azurecr.io/nodejsmongo
+  repository: mtcslabtest.azurecr.io/nodejsmongodb
   tag: latest
   pullPolicy: Always
 
