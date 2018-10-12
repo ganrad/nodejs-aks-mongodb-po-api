@@ -20,6 +20,7 @@ checks:
 
 ingress:
   enabled: true
+  name: po-service
   annotations:
     kubernetes.io/ingress.class: addon-http-application-routing
     # kubernetes.io/tls-acme: "true"
@@ -31,7 +32,7 @@ ingress:
       hosts:
         - po-service.033185fc7e8b483fae46.westus.aksapp.io
 
-resources: {}
+resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following

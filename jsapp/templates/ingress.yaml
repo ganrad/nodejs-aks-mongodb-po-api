@@ -4,7 +4,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ .Values.ingress.name }}
   labels:
     app: {{ template "jsapp.name" . }}
     chart: {{ template "jsapp.chart" . }}
