@@ -1,1 +1,1 @@
-curl -i -X GET http://localhost:8080/orders
+curl -v -k -X GET https://po-service.033185fc7e8b483fae46.westus.aksapp.io/orders
