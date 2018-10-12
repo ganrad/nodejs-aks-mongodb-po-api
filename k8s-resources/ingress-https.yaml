@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  labels:
+    app: jsapp
+    chart: jsapp-0.1.0
+    heritage: Tiller
+    release: jsapp
+  name: po-service
+  namespace: nodejs-mongodb
+spec:
+  rules:
+  - host: po-service.033185fc7e8b483fae46.westus.aksapp.io
+    http:
+      paths:
+      - backend:
+          serviceName: jsapp
+          servicePort: http
+        path: /
+  tls:
+  - hosts:
+    - po-service.033185fc7e8b483fae46.westus.aksapp.io
+    secretName: po-ssh-secret

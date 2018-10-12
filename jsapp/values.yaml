@@ -28,7 +28,7 @@ ingress:
   hosts:
     - po-service.033185fc7e8b483fae46.westus.aksapp.io
   tls: 
-    - secretName: ssh-key-secret
+    - secretName: po-ssh-secret
       hosts:
         - po-service.033185fc7e8b483fae46.westus.aksapp.io
 
